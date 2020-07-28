@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "durian-api",
+    "public": "src/static",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{
+      "source": "**",
+      "run": {
+        "serviceId": "durian-classification"
+      }
+    }]
+  }
+}

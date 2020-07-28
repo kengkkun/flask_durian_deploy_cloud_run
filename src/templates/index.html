@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Durian Ripeness Classification</title>
+	<link rel="shortcut icon" href="static/img/favicon.svg" >
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+
+<body>
+	<div class="bg-image"></div>
+	<div class="wrapper">
+		<h1>ทำนายความสุกของทุเรียนด้วยเสียงเคาะ</h1>
+		<p> การพัฒนาเว็ปแอปพลิเคชันสำหรับตรวจสอบความสุกของทุเรียนด้วยการนำเสียงเคาะ
+			จากการบันทึกเสียงมาตรวจสอบโดยไฟล์เสียงจะต้องเป็นนามสกุล 
+			.wav เท่านั้น ซึ่งได้ตรวจสอบผ่านระบบ AI (Artificial Intelligence) 
+			เพื่อให้ทำนายว่าเสียงที่ป้อนเข้าไปเป็นผลทุเรียนมีระดับความสุกแค่ไหน สุก สุกปานกลาง หรือ
+			ดิบ(ยังไม่สามารถรับประทานได้)
+			** ระบบยังใช้ได้แค่กับทุเรียนพันธุ์หมอนทองเท่านั้น (เบต้า) **</p>
+		<form action="/prediction" method="POST" enctype="multipart/form-data">
+		<input type="file" name='file' id="file"/>
+		<label for="file" class="btn-1" id="file-upload-filename">เลือกไฟล์เสียง/Choose File</label>
+		<h1></h1>
+		<button type="submit" value="Submit">อัปโหลด/Upload </button>
+		</form>
+
+		<p class="footer">By Weangchai Kharamat. (Electrical Engineering of Chulalongkorn University) </p>
+	</div>
+
+	<script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
