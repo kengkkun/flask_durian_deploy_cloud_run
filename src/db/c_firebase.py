@@ -2,10 +2,10 @@ import pyrebase
 
 
 config = {
-  'apiKey': "AIzaSyAQKROF-qLGbcQ4Dx8gyME2byQkis2wPNw",
-  'authDomain': "durian-classification.firebaseapp.com",
-  'databaseURL': "https://durian-classification.firebaseio.com",
-  'storageBucket': "durian-classification.appspot.com"
+  'apiKey': "Your API key",
+  'authDomain': "Your-Domain.firebaseapp.com",
+  'databaseURL': "Your-Domain.firebaseio.com",
+  'storageBucket': "Bucket-storage"
 }
 
 firebase = pyrebase.initialize_app(config)
