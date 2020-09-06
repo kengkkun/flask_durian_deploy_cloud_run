@@ -1,3 +1,5 @@
+# Route file api for (GET) all data from firebase
+
 from json import dumps
 from server.db import c_firebase
 
